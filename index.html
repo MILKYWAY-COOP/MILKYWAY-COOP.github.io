@@ -1,43 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MilkyWay</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/4c289846ca.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,100;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <section class="header">
-      <nav>
-        <a href="index.html"><img src="images/img33.png" alt="" /></a>
-        <div class="nav-links" id="navLinks">
-          <i class="fa fa-times" onclick="hideMenu()"></i>
-          <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">PROJECTS</a></li>
-            <li>
-              <a href="https://steveatmilkyway.blogspot.com/" target="_blank"
-                >BLOG</a
-              >
-            </li>
-            <li><a href="">CONTACT US</a></li>
-          </ul>
+      <nav class="nav flex">
+        <div>
+          <img src="images/img33.png" alt="" class="logo" />
         </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="nav-links"
+          aria-expanded="false"
+          type="menu"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul class="nav-links flex" data-visible="false">
+          <li><a href="">HOME</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">PROJECTS</a></li>
+          <li>
+            <a href="https://steveatmilkyway.blogspot.com/" target="_blank"
+              >BLOG</a
+            >
+          </li>
+          <li><a href="">CONTACT US</a></li>
+        </ul>
       </nav>
       <div class="text-box">
         <h1>MilkyWay Cooperation</h1>
@@ -242,7 +236,7 @@
       <a href="" class="visit-btn">CONTACT US</a>
     </section>
 
-    <section class="footer">
+    <!-- <section class="footer">
       <div class="footer-icon">
         <img src="images/img33.png" height="200px" />
       </div>
@@ -297,24 +291,6 @@
           </li>
         </ul>
       </div>
-    </section>
-    <script>
-      var navLinks = document.getElementById('navLinks');
-      function showMenu() {
-        navLinks.style.right = '0';
-      }
-      function hideMenu() {
-        navLinks.style.right = '-200px';
-      }
-    </script>
-    <script>
-      var navLinks = document.getElementById('navLinks');
-      function showMenu() {
-        navLinks.style.right = '0';
-      }
-      function hideMenu() {
-        navLinks.style.right = '-200px';
-      }
-    </script>
+    </section> -->
   </body>
 </html>
