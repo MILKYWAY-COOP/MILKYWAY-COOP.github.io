@@ -72,6 +72,10 @@ function validateEmail() {
 
 function submitForm() {
   if (validateInput() && validateEmail()) {
+    inputs.forEach((input) => {
+      input.value = '';
+    }),
+      (email.value = '');
     // alert('Form submitted');
   } else {
     // alert('Please fill in all fields');
