@@ -315,7 +315,7 @@ nav {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.95em;
   position: absolute;
-  width: 100%;
+  width: 100vh;
   background-color: rgb(4, 3, 57);
   display: flex;
   justify-content: space-evenly;
