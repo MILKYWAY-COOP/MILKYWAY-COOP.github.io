@@ -320,14 +320,17 @@ nav {
   width: 300px;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid rgb(4, 3, 57);
+  border: none;
+  outline: none;
 }
 
 .form-col textarea {
   width: 300px;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid rgb(4, 3, 57);
+  border: none;
+  outline: none;
+  aspect-ratio: 1/0.2;
 }
 
 .form-col button {
@@ -342,6 +345,7 @@ nav {
   font-weight: 200;
   cursor: pointer;
 }
+
 
 .footer {
   margin: 0;
