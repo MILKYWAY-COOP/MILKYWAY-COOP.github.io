@@ -15,6 +15,7 @@ function toggleNav() {
   } else {
     navLinks.setAttribute('data-visible', false);
     navToggle.setAttribute('aria-expanded', false);
+    body.style.overflow = null
   }
 }
 
