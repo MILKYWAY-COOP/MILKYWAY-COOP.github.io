@@ -1,7 +1,6 @@
 const navLinks = document.querySelector('.nav-links');
 const navToggle = document.querySelector('.mobile-nav-toggle');
-
-console.log(navToggle);
+const dropDownToggle = document.querySelectorAll('.drop');
 
 navToggle.addEventListener('click', () => {
   const visible = navLinks.getAttribute('data-visible');
@@ -13,4 +12,22 @@ navToggle.addEventListener('click', () => {
     navLinks.setAttribute('data-visible', false);
     navToggle.setAttribute('aria-expanded', false);
   }
+});
+
+function toggleDropDown() {
+  let visible = this.getAttribute('data-visible');
+  const dropDown = this.parentElement.querySelector('.row')
+
+  if (visible === 'false') {
+    dropDown.style.display = 'flex';
+    this.setAttribute('data-visible', true);
+    
+  } else {
+    dropDown.style.display = 'none';
+    this.setAttribute('data-visible', false);
+  }
+}
+
+dropDownToggle.forEach((item) => {
+  item.addEventListener('click', toggleDropDown);
 });
