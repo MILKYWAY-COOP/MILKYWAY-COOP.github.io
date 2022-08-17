@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MilkyWay</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -19,7 +19,7 @@
           aria-expanded="false"
           type="menu"
         >
-          <span class="sr-only">Menu</span>
+          <span class="sr-only"></span>
         </button>
         <ul class="nav-links flex" data-visible="false">
           <li><a href="">HOME</a></li>
@@ -36,15 +36,17 @@
       <div class="text-box">
         <h1>MilkyWay Cooperation</h1>
         <p>Tech is our Business and Business is Good</p>
-        <a href="" class="visit-btn">Visit Us To Know More</a>
       </div>
     </section>
-    <section class="Projects">
-      <h1>Our Projects</h1>
-      <p>Tech is our Business and Business is Good</p>
+
+    <div class="Projects">
+      <div class='drop' data-visible="false">
+        <h1>Our Projects</h1>
+        <img src="images/drop-down.svg" alt="" class="drop-down" />
+      </div>
       <div class="row">
         <div class="project-col">
-          <h3>Anselm Adventures</h3>
+          <h3>The MilkyWay Post</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam
             id voluptas, quae sapiente, illum nam incidunt vero vel dolores
@@ -52,15 +54,7 @@
           </p>
         </div>
         <div class="project-col">
-          <h3>Trex Collection</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam
-            id voluptas, quae sapiente, illum nam incidunt vero vel dolores
-            magnam. Saepe eum culpa porro accusamus soluta molestias aut eaque?
-          </p>
-        </div>
-        <div class="project-col">
-          <h3>SheddieTech</h3>
+          <h3>House TnC</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam
             id voluptas, quae sapiente, illum nam incidunt vero vel dolores
@@ -68,47 +62,15 @@
           </p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="Learn-More">
-      <h1>More About the Projects</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-      <div class="row">
-        <div class="campus-col">
-          <img src="images/lums.jpg" />
-          <div class="layer">
-            <h3>ANSELM ADVENTURES</h3>
-          </div>
-        </div>
-        <div class="campus-col">
-          <img src="images/max.jpg" />
-          <div class="layer">
-            <h3>BLOG</h3>
-          </div>
-        </div>
-        <div class="campus-col">
-          <img src="images/max.jpg" />
-          <div class="layer">
-            <h3>SHEDDIETECH</h3>
-          </div>
-        </div>
+    <div class="Services">
+      <div class='drop' data-visible="false">
+        <h1>Services we offer</h1>
+        <img src="images/drop-down.svg" alt="" class="drop-down" />
       </div>
-    </section>
-
-    <section class="services">
-      <h1>Services we offer</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-
-      <div class="row">
-        <div class="services-col">
-          <img src="images/camp.jpg" />
-          <h3>BadAss Hikes & Adventures</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam
-            id voluptas, quae sapiente, illum
-          </p>
-        </div>
-        <div class="services-col">
+      <div class="row" data-rowTwo="">
+        <div class="Services-col">
           <img src="images/code.png" />
           <h3>Coding</h3>
           <p>
@@ -116,7 +78,7 @@
             id voluptas, quae sapiente, illum
           </p>
         </div>
-        <div class="services-col">
+        <div class="Services-col">
           <img src="images/photoshop.jpg" />
           <h3>Classy Edits</h3>
           <p>
@@ -125,118 +87,33 @@
           </p>
         </div>
       </div>
-    </section>
+    </div>  
 
-    <section class="Us">
-      <h1>Our Happy Team</h1>
-      <div class="row">
-        <div class="Us-col">
-          <img src="images/smm.jpg" />
-          <div class="card">
-            <p>
-              <strong>If I conquer myself I will be unstoppable</strong><br />
-              The psychological phenomenon known as “John Henryism” posits that
-              when goal-oriented, success-minded people strive ceaselessly in
-              the absence of adequate support and resources, they can work
-              themselves to death. Or, at least, toward it.
-            </p>
-            <h3>Muchendu Maina, "Steve"</h3>
-            <h4>Director</h4>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-        </div>
-        <div class="Us-col">
-          <img src="images/alm.jpg" class="lums" />
-          <div>
-            <p>
-              Yoh! <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              veniam id voluptas, quae sapiente, illum nam incidunt vero vel
-              dolores magnam. Saepe eum culpa porro accusamus soluta molestias
-              aut eaque?
-            </p>
-            <h3>Anselm Lumumba</h3>
-            <h4>CEO - Anselm Adventures</h4>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-        </div>
-        <div class="Us-col">
-          <img src="images/she.jpg" class="she" />
-          <div>
-            <p>
-              Why?
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              veniam id voluptas, quae sapiente, illum nam incidunt vero vel
-              dolores magnam. Saepe eum culpa porro accusamus soluta molestias
-              aut eaque?
-            </p>
-            <h3>Shadrack Cheruyot</h3>
-            <h4>Graphic Designer</h4>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-        </div>
-        <!-- <div class="Us-col">
-          <img src="images/she.jpg" class="she" />
-          <div>
-            <p>
-              Why?
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              veniam id voluptas, quae sapiente, illum nam incidunt vero vel
-              dolores magnam. Saepe eum culpa porro accusamus soluta molestias
-              aut eaque?
-            </p>
-            <h3>MaxWell Ndegwa</h3>
-            <h4>Software Developer</h4>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-        </div>
-        <div class="Us-col">
-          <img src="images/she.jpg" class="she" />
-          <div>
-            <p>
-              Why?
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              veniam id voluptas, quae sapiente, illum nam incidunt vero vel
-              dolores magnam. Saepe eum culpa porro accusamus soluta molestias
-              aut eaque?
-            </p>
-            <h3>George Mwangi</h3>
-            <h4>Software Developer</h4>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-        </div> -->
+    <div class="Contact">
+      <div class='drop' data-visible="false">
+        <h1>Contact Us</h1>
+        <img src="images/drop-down.svg" alt="" class="drop-down" />
       </div>
-    </section>
+      <div class='row'>
+        <div class="form-col">
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+        </div>
+        <div class="form-col">
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+        </div>
+        <div class="form-col">
+          <label for="message">Message</label>
+          <textarea id="message"></textarea>
+        </div>
+        <div class="form-col">
+          <button type="submit">Send</button>
+        </div>
+      </div>
+    </div> 
 
-    <section class="cta">
-      <h1>Critic MilkyWay</h1>
-      <a href="" class="visit-btn">CONTACT US</a>
-    </section>
-
-    <!-- <section class="footer">
+    <section class="footer">
       <div class="footer-icon">
         <img src="images/img33.png" height="200px" />
       </div>
@@ -291,6 +168,6 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
   </body>
 </html>
