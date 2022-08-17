@@ -2,7 +2,9 @@ const navLinks = document.querySelector('.nav-links');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 const dropDownToggle = document.querySelectorAll('.drop');
 
-navToggle.addEventListener('click', () => {
+
+//function
+function toggleNav() {
   const visible = navLinks.getAttribute('data-visible');
 
   if (visible === 'false') {
@@ -12,22 +14,27 @@ navToggle.addEventListener('click', () => {
     navLinks.setAttribute('data-visible', false);
     navToggle.setAttribute('aria-expanded', false);
   }
-});
+}
 
 function toggleDropDown() {
   let visible = this.getAttribute('data-visible');
-  const dropDown = this.parentElement.querySelector('.row')
+  let dropDown = this.parentElement.querySelector('.row');
+
+  dropDown === null
+    ? (dropDown = this.parentElement.querySelector('.contact-form'))
+    : null;
 
   if (visible === 'false') {
     dropDown.style.display = 'flex';
     this.setAttribute('data-visible', true);
-    
   } else {
     dropDown.style.display = 'none';
     this.setAttribute('data-visible', false);
   }
 }
 
+//Event listeners
 dropDownToggle.forEach((item) => {
   item.addEventListener('click', toggleDropDown);
 });
+navToggle.addEventListener('click', toggleNav);
