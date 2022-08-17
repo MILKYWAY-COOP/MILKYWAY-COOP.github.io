@@ -93,5 +93,4 @@ inputs.forEach((item) => {
   item.addEventListener('blur', unFocusInput);
 });
 
-//listen for validation
 submit.addEventListener('click', submitForm);
