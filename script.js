@@ -5,6 +5,7 @@ const body = document.querySelector('body');
 const inputs = document.querySelectorAll('.input');
 const activeInput = document.activeElement.tagName;
 const submit = document.querySelector('.submit');
+const email = document.querySelector('.email');
 
 //function
 function toggleNav() {
@@ -39,7 +40,6 @@ function toggleDropDown() {
 }
 
 function focusInput() {
-  console.log(this)
   this.style.border = '2px solid #040339';
 }
 
@@ -47,18 +47,35 @@ function unFocusInput() {
   this.style.border = 'none';
 }
 
-//validate that each input is filled out
 function validateInput() {
   let valid = true;
-  inputs.forEach(input => {
+  inputs.forEach((input) => {
     if (input.value === '') {
       input.style.border = '2px solid #ff0505';
       valid = false;
     } else {
-      input.style.border = '2px solid #040339';
+      return valid;
     }
   });
-  return valid;
+}
+//check whether the email is valid
+function validateEmail() {
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (emailRegex.test(email.value)) {
+    email.style.border = '2px solid #040339';
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function submitForm() {
+  if (validateInput() && validateEmail()) {
+    // alert('Form submitted');
+  } else {
+    // alert('Please fill in all fields');
+  }
 }
 
 //Event listeners
@@ -77,4 +94,4 @@ inputs.forEach((item) => {
 });
 
 //listen for validation
-submit.addEventListener('click', validateInput);
+submit.addEventListener('click', submitForm);
