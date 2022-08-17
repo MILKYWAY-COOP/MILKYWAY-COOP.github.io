@@ -214,6 +214,7 @@ nav {
 }
 
 .row {
+  width: 100%;
   margin-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
@@ -231,22 +232,14 @@ nav {
   }
 }
 
-
-.form-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 .project-col {
-    flex-basis: 31%;
-    background: #ffffff;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: all 0.5s;
+  flex-basis: 31%;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: all 0.5s;
 }
 
 .project-col h3 {
@@ -281,32 +274,73 @@ nav {
 }
 
 .Services-col img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .Services-col p {
-    padding: 0;
+  padding: 0;
 }
 
 .Services-col h3 {
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 .Contact {
   width: 100%;
   margin-top: 10px;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.contact {
+.contact-form {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-col {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form-col label {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-col input {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(4, 3, 57);
+}
+
+.form-col textarea {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(4, 3, 57);
+}
+
+.form-col button {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  background-color: rgb(4, 3, 57);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 200;
+  cursor: pointer;
 }
 
 .footer {
@@ -365,7 +399,7 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .footer-icon img{
+  .footer-icon img {
     width: 50px;
     height: auto;
   }
