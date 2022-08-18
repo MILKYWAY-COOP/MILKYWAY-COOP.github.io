@@ -6,6 +6,10 @@ const inputs = document.querySelectorAll('.input');
 const activeInput = document.activeElement.tagName;
 const submit = document.querySelector('.submit');
 const email = document.querySelector('.email');
+const cover = document.querySelector('.cover');
+const scrollButton = document.querySelectorAll('.scroll-button');
+const leftScroller = document.querySelector('[data-scroll="left"]');
+const rightScroller = document.querySelector('[data-scroll="right"]');
 
 //function
 function toggleNav() {
@@ -82,6 +86,28 @@ function submitForm() {
   }
 }
 
+function scroll() {
+  if (cover.offsetWidth + cover.scrollLeft >= cover.scrollWidth - 2) {
+    leftScroller.style.display = 'none';
+  } else {
+    leftScroller.style.display = 'block';
+  }
+
+  if (cover.scrollLeft <= 0) { 
+    rightScroller.style.display = 'none';
+  } else {
+    rightScroller.style.display = 'block';
+  }
+
+  if (this.getAttribute('data-scroll') == 'left') {
+    cover.scrollBy(250, 0);
+  }
+
+  if (this.getAttribute('data-scroll') == 'right') {
+    cover.scrollBy(-250, 0);
+  }
+}
+
 //Event listeners
 dropDownToggle.forEach((item) => {
   item.addEventListener('click', toggleDropDown);
@@ -98,3 +124,7 @@ inputs.forEach((item) => {
 });
 
 submit.addEventListener('click', submitForm);
+
+scrollButton.forEach((item) => {
+  item.addEventListener('click', scroll);
+});
