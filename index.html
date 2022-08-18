@@ -31,15 +31,12 @@
           <span class="sr-only"></span>
         </button>
         <ul class="nav-links flex" data-visible="false">
-          <li><a href="">HOME</a></li>
-          <li><a href="">ABOUT</a></li>
-          <li><a href="">PROJECTS</a></li>
-          <li>
-            <a href="https://steveatmilkyway.blogspot.com/" target="_blank"
-              >BLOG</a
-            >
-          </li>
-          <li><a href="">CONTACT US</a></li>
+          <li class='nav-items'><a href="">ABOUT</a></li>
+          <li class='nav-items'><a href="#Projects">PRODUCTS</a></li>
+          <li class='nav-items'>
+            <a href="#Services">SERVICES</a>
+          </l class='nav-items'i>
+          <li class='nav-items'><a href="#Contact">CONTACT US</a></li>
         </ul>
       </nav>
       <div class="text-box">
@@ -48,109 +45,107 @@
       </div>
     </section>
 
-    <div class="rest">
-      <div class="Projects">
-        <div class="drop" data-visible="false">
-          <h1>Products & Partners</h1>
-          <img src="images/drop-down.svg" alt="" class="drop-down" />
-        </div>
-        <div class="row">
-          <div>
-            <button class="scroll-button" data-scroll="left">
-              <span class="material-symbols-outlined"> arrow_back_ios </span>
-            </button>
-          </div>
-          <div class="cover">
-            <div class="project-col">
-              <h3>The MilkyWay Post</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                veniam id voluptas,
-              </p>
-            </div>
-            <div class="project-col">
-              <h3>House TnC</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                veniam id voluptas,
-              </p>
-            </div>
-            <div class="project-col">
-              <h3>Blog</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                veniam id voluptas,
-              </p>
-            </div>
-            <div class="project-col">
-              <h3>Anselm Adventures</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                veniam id voluptas,
-              </p>
-            </div>
-            <div class="project-col">
-              <h3>Digikids</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                veniam id voluptas,
-              </p>
-            </div>
-          </div>
-          <div>
-            <button class="scroll-button" data-scroll="right">
-              <span class="material-symbols-outlined"> arrow_forward_ios </span>
-            </button>
-          </div>
-        </div>
+    <div class="Projects" id="Projects">
+      <div class="drop" data-visible="false">
+        <h1>Products & Partners</h1>
+        <img src="images/drop-down.svg" alt="" class="drop-down" />
       </div>
-
-      <div class="Services">
-        <div class="drop" data-visible="false">
-          <h1>Services we offer</h1>
-          <img src="images/drop-down.svg" alt="" class="drop-down" />
+      <div class="row">
+        <div>
+          <button class="scroll-button" data-scroll="left">
+            <span class="material-symbols-outlined"> arrow_back_ios </span>
+          </button>
         </div>
-        <div class="services row">
-          <div class="Services-col">
-            <img src="images/code.png" />
-            <h3>Coding</h3>
+        <div class="cover">
+          <div class="project-col">
+            <h3>The MilkyWay Post</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              veniam id voluptas, quae sapiente, illum
+              veniam id voluptas,
             </p>
           </div>
-          <div class="Services-col">
-            <img src="images/photoshop.jpg" />
-            <h3>Classy Edits</h3>
+          <div class="project-col">
+            <h3>House TnC</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              veniam id voluptas, quae sapiente, illum
+              veniam id voluptas,
+            </p>
+          </div>
+          <div class="project-col">
+            <h3>Blog</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              veniam id voluptas,
+            </p>
+          </div>
+          <div class="project-col">
+            <h3>Anselm Adventures</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              veniam id voluptas,
+            </p>
+          </div>
+          <div class="project-col">
+            <h3>Digikids</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              veniam id voluptas,
             </p>
           </div>
         </div>
-      </div>
-
-      <div class="Contact">
-        <div class="drop" data-visible="false">
-          <h1>Contact Us</h1>
-          <img src="images/drop-down.svg" alt="" class="drop-down" />
+        <div>
+          <button class="scroll-button" data-scroll="right">
+            <span class="material-symbols-outlined"> arrow_forward_ios </span>
+          </button>
         </div>
-        <div class="contact-form">
-          <div class="form-col">
-            <label for="name">Name</label>
-            <input type="text" class="input" data-hasFocus="false" />
-          </div>
-          <div class="form-col">
-            <label for="email">Email</label>
-            <input type="text" class="input email" data-hasFocus="false" />
-          </div>
-          <div class="form-col">
-            <label for="message">Message</label>
-            <textarea class="input" data-hasFocus="false"></textarea>
-          </div>
-          <div class="form-col">
-            <button type="submit" class="submit">Reach out</button>
-          </div>
+      </div>
+    </div>
+
+    <div class="Services" id="Services">
+      <div class="drop" data-visible="false">
+        <h1>Services we offer</h1>
+        <img src="images/drop-down.svg" alt="" class="drop-down" />
+      </div>
+      <div class="services row">
+        <div class="Services-col">
+          <img src="images/code.png" />
+          <h3>Coding</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam
+            id voluptas,
+          </p>
+        </div>
+        <div class="Services-col">
+          <img src="images/photoshop.jpg" />
+          <h3>Classy Edits</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam
+            id voluptas,
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Contact" id="Contact">
+      <div class="drop" data-visible="false">
+        <h1>Contact Us</h1>
+        <img src="images/drop-down.svg" alt="" class="drop-down" />
+      </div>
+      <div class="contact-form">
+        <div class="form-col">
+          <label for="name">Name</label>
+          <input type="text" class="input" data-hasFocus="false" />
+        </div>
+        <div class="form-col">
+          <label for="email">Email</label>
+          <input type="text" class="input email" data-hasFocus="false" />
+        </div>
+        <div class="form-col">
+          <label for="message">Message</label>
+          <textarea class="input" data-hasFocus="false"></textarea>
+        </div>
+        <div class="form-col">
+          <button type="submit" class="submit">Reach out</button>
         </div>
       </div>
     </div>
