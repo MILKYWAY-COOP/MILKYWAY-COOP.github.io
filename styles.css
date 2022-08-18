@@ -400,8 +400,10 @@ nav {
 }
 
 .Services-col {
-  flex-basis: 31%;
+  width: 100%;
+  flex-basis: 35%;
   border-radius: 10px;
+  margin-top: 0px;
   margin-bottom: 5%;
   text-align: left;
   color: black;
