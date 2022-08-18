@@ -289,9 +289,13 @@ nav {
   width: 0.5rem;
 } */
 
+.material-symbols-rounded {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
 .project-col {
   min-width: 30%;
-  height: auto;
+  height: 300px;
   background: #ffffff;
   border-radius: 5px;
   margin-bottom: 5%;
@@ -299,21 +303,64 @@ nav {
   box-sizing: border-box;
   transition: all 0.5s;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .project-col h3 {
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   margin: 10px 0;
 }
 
 .project-col p {
   text-align: center;
-  margin: 10px;
+}
+
+.project-img {
+  padding: 10px;
+  width: 100px;
+  aspect-ratio: 1;
+  margin-bottom: 10px;
 }
 
 .project-col:hover {
   box-shadow: 0 0 30px 20px rgba(0, 10, 14, 0.2);
+}
+
+.project-col a {
+  text-decoration: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 48;
+}
+
+.visit {
+  margin: 0px;
+  padding: 0px;
+}
+
+.project-button {
+  display: inline;
+  color: black;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: underline;
+  border: none;
+  background-color: inherit;
+}
+
+.project-button * {
+  margin: 0px;
+}
+
+.project-button span:hover {
+  text-decoration: dashed;
+  background-color: #ffffff;
 }
 
 .Services {
@@ -339,6 +386,10 @@ nav {
 }
 
 @media (max-width: 600px) {
+  .project-col {
+    width: 100%;
+  }
+
   .services {
     display: flex;
     flex-direction: column;
@@ -397,6 +448,7 @@ nav {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 5px;
+  color: black;
 }
 
 .form-col input {
