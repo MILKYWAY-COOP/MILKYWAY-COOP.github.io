@@ -10,6 +10,8 @@ const cover = document.querySelector('.cover');
 const scrollButton = document.querySelectorAll('.scroll-button');
 const leftScroller = document.querySelector('[data-scroll="left"]');
 const rightScroller = document.querySelector('[data-scroll="right"]');
+const navItems = document.querySelectorAll('.nav-items');
+
 
 //function
 function toggleNav() {
@@ -20,10 +22,14 @@ function toggleNav() {
     navToggle.setAttribute('aria-expanded', true);
     body.style.overflow = 'hidden';
   } else {
-    navLinks.setAttribute('data-visible', false);
-    navToggle.setAttribute('aria-expanded', false);
-    body.style.overflow = null;
+    closeNav();
   }
+}
+
+function closeNav() {
+  navLinks.setAttribute('data-visible', false);
+  navToggle.setAttribute('aria-expanded', false);
+  body.style.overflow = null;
 }
 
 function toggleDropDown() {
@@ -57,32 +63,29 @@ function validateInput() {
     if (input.value === '') {
       input.style.border = '2px solid #ff0505';
       valid = false;
-    } else {
-      return valid;
     }
   });
+  return valid;
 }
 //check whether the email is valid
 function validateEmail() {
   const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (emailRegex.test(email.value)) {
-    email.style.border = '2px solid #040339';
     return true;
   } else {
+    email.style.border = '2px solid #ff0505';
     return false;
   }
 }
 
 function submitForm() {
+  console.log(validateInput());
+  console.log(validateEmail());
   if (validateInput() && validateEmail()) {
     inputs.forEach((input) => {
       input.value = '';
-    }),
-      (email.value = '');
-    // alert('Form submitted');
-  } else {
-    // alert('Please fill in all fields');
+    });
   }
 }
 
@@ -93,7 +96,7 @@ function scroll() {
     leftScroller.style.display = 'block';
   }
 
-  if (cover.scrollLeft <= 0) { 
+  if (cover.scrollLeft <= 0) {
     rightScroller.style.display = 'none';
   } else {
     rightScroller.style.display = 'block';
@@ -127,4 +130,8 @@ submit.addEventListener('click', submitForm);
 
 scrollButton.forEach((item) => {
   item.addEventListener('click', scroll);
+});
+
+navItems.forEach((item) => {
+  item.addEventListener('click', closeNav);
 });
