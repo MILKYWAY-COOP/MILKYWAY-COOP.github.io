@@ -49,14 +49,6 @@ function toggleDropDown() {
   }
 }
 
-function focusInput() {
-  this.style.border = '2px solid #040339';
-}
-
-function unFocusInput() {
-  this.style.border = 'none';
-}
-
 function validateInput() {
   let valid = true;
   inputs.forEach((input) => {
@@ -80,10 +72,9 @@ function validateEmail() {
 }
 
 function submitForm() {
-  console.log(validateInput());
-  console.log(validateEmail());
   if (validateInput() && validateEmail()) {
     inputs.forEach((input) => {
+      input.style.border = '2px solid #ffffff';
       input.value = '';
     });
   }
@@ -117,14 +108,6 @@ dropDownToggle.forEach((item) => {
 });
 
 navToggle.addEventListener('click', toggleNav);
-
-inputs.forEach((item) => {
-  item.addEventListener('focus', focusInput);
-});
-
-inputs.forEach((item) => {
-  item.addEventListener('blur', unFocusInput);
-});
 
 submit.addEventListener('click', submitForm);
 
