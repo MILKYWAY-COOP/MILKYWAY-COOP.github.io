@@ -9,7 +9,13 @@
 }
 
 body {
-  background-color: turquoise;
+  background: linear-gradient(rgb(45 170 225 / 0.37), rgb(45 170 225 / 0.37)),
+    url(/images/milkywaybackground.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  color: #444;
 }
 
 nav {
@@ -163,10 +169,6 @@ nav {
   }
 }
 
-.rest {
-  align-items: center;
-}
-
 .Projects {
   position: relative;
   width: 80%;
@@ -228,6 +230,7 @@ nav {
   transition: all 0.5s;
   scroll-behavior: smooth;
   overflow: auto;
+  gap: 3%;
 }
 
 .cover::-webkit-scrollbar {
@@ -262,31 +265,23 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .Projects {
-    width: 80%;
-    overflow: hidden;
+  .cover {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 0px;
-    margin-left: 10%;
-  }
-
-  .cover {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     overflow: auto;
-    -webkit-box-pack: center;
+    position: relative;
   }
 
-  .project-col {
-    align-self: flex-start;
-    width: 100%;
-    overflow: hidden;
+  .scroll-button[data-scroll='left'] {
+    display: none;
+  }
+
+  .scroll-button[data-scroll='right'] {
+    display: none;
   }
 }
 
@@ -300,7 +295,6 @@ nav {
   background: #ffffff;
   border-radius: 5px;
   margin-bottom: 5%;
-  margin-right: 3%;
   padding: 20px 12px;
   box-sizing: border-box;
   transition: all 0.5s;
@@ -322,6 +316,15 @@ nav {
   box-shadow: 0 0 30px 20px rgba(0, 10, 14, 0.2);
 }
 
+.Services {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .services {
   width: 100%;
   margin-top: 20px;
@@ -335,13 +338,14 @@ nav {
   transition: all 0.5s;
 }
 
-.Services {
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (max-width: 600px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
 }
 
 .Services-col {
@@ -349,6 +353,7 @@ nav {
   border-radius: 10px;
   margin-bottom: 5%;
   text-align: left;
+  color: black;
 }
 
 .Services-col img {
@@ -422,6 +427,15 @@ nav {
   font-size: 20px;
   font-weight: 200;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form-col button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(4, 3, 57);
+  font-size: 20px;
+  font-weight: 200;
+  border: 2px solid rgb(4, 3, 57);
 }
 
 .footer {
