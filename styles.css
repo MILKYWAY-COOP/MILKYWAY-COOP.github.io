@@ -311,7 +311,7 @@ nav {
 
 .project-col h3 {
   text-align: center;
-  font-weight: 700;
+  font-weight: 00;
   margin: 10px 0;
 }
 
@@ -457,6 +457,15 @@ nav {
   padding: 10px;
   border: none;
   outline: none;
+  border: 2px solid #ffffff;
+}
+
+.form-col input:focus {
+  border: 2px solid #040339;
+}
+
+.form-col textarea:focus {
+  border: 2px solid #040339;
 }
 
 .form-col textarea {
@@ -466,6 +475,7 @@ nav {
   border: none;
   outline: none;
   aspect-ratio: 1/0.2;
+  border: 2px solid #ffffff;
 }
 
 .form-col button {
@@ -480,6 +490,7 @@ nav {
   font-weight: 200;
   cursor: pointer;
   transition: all 0.2s;
+  border: 2px solid rgb(4, 3, 57);
 }
 
 .form-col button:hover {
