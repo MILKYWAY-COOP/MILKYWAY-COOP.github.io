@@ -8,10 +8,21 @@ body {
 }
 
 .mapdiv path {
-    fill: #fff;
-    stroke: #000;
+    fill: rgb(246, 117, 117);
+    stroke: aqua;
     stroke-width: 1px;
     stroke-linejoin: round;
     stroke-linecap: round;
     transition: fill 0.3s;
+    position: relative;
+}
+
+.description {
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    border-radius: 4px;
+    margin: auto;
+    text-align: center;
+    z-index: 100;
 }
