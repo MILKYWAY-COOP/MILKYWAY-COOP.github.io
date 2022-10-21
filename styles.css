@@ -167,18 +167,39 @@ nav {
     margin: 0;
     padding: 0;
   }
+
+  .text-box h1 {
+    font-size: 42px;
+  }
+
+  .text-box p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+}
+
+.body1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2em;
+}
+
+@media (max-width: 600px) {
+  .body1 {
+    padding: 0 0.5em;
+  }
 }
 
 .Projects {
   position: relative;
   width: 80%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 10px 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 0px;
-  margin-left: 10%;
 }
 
 .drop {
@@ -192,6 +213,12 @@ nav {
   font-size: 30px;
   font-weight: 600;
   color: rgb(0, 0, 0);
+}
+
+@media (max-width: 600px) {
+  .drop h1 {
+    font-size: 20px;
+  }
 }
 
 .drop img {
@@ -215,26 +242,12 @@ nav {
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
-.cover {
-  position: relative;
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  transition: all 0.5s;
-  scroll-behavior: smooth;
-  overflow: auto;
-  gap: 3%;
-}
-
-.cover::-webkit-scrollbar {
-  -webkit-appearance: none;
+.navigate1 {
+  width: 40px;
+  aspect-ratio: 1;
+  height: auto;
 }
 
 .scroll-button {
@@ -263,6 +276,25 @@ nav {
 .material-symbols-outlined {
   padding: 10px;
 }
+
+.cover {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  transition: all 0.5s;
+  scroll-behavior: smooth;
+  overflow: auto;
+  gap: 3%;
+}
+
+.cover::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
 
 @media (max-width: 600px) {
   .cover {
@@ -365,8 +397,7 @@ nav {
 
 .Services {
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 10px 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -375,8 +406,6 @@ nav {
 .services {
   width: 100%;
   margin-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
   display: none;
   flex-direction: row;
   justify-content: center;
@@ -401,24 +430,28 @@ nav {
 
 .Services-col {
   width: 100%;
-  flex-basis: 35%;
   border-radius: 10px;
   margin-top: 0px;
   margin-bottom: 5%;
   text-align: left;
   color: black;
+  display: grid;
+  grid-template-rows: 70% 15% 15%;
 }
 
 .Services-col img {
   width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 
 .Services-col p {
+  height: 100%;
   padding: 0;
 }
 
 .Services-col h3 {
+  height: 100%;
   margin-top: 16px;
   margin-bottom: 15px;
   text-align: left;
@@ -504,41 +537,41 @@ nav {
 }
 
 .footer {
-  margin: 0;
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.95em;
-  position: absolute;
   width: 100%;
   background-color: rgb(4, 3, 57);
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  bottom: 0;
 }
 
 .footer-icon {
   position: relative;
 }
 
-.social-icons {
-  padding-top: 15px;
-  text-align: left;
+.bottom {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
-.social-icons a {
-  transition: 0.3s;
-  padding-right: 20px;
-  text-decoration: none;
-  color: white;
-  font-size: 1.6em;
-}
 
 .footer-info {
   margin-top: 30px;
-  padding: 0;
+  text-align: left;
 }
+
 #copyright {
   font-family: 'Poppins', sans-serif;
 }
+
+.footer-nav {
+  width: 100%;
+  text-align: left;
+}
+
 .footer-nav-list {
   list-style-type: none;
   margin-top: 30px;
@@ -553,14 +586,34 @@ nav {
   text-decoration: underline;
 }
 
-.social-icons a:hover {
-  transition: 0.3s;
-  filter: drop-shadow(0 0 0.5em grey);
+.social-icons {
+  font-size: 20px;
 }
 
 @media (max-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
   .footer-icon img {
     width: 50px;
     height: auto;
+  }
+
+  .footer-nav {
+    width: 100%;
+    text-align: right;
+  }
+
+  .footer-info,
+  .footer-nav {
+    font-size: 14px;
   }
 }
