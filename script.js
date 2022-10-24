@@ -13,7 +13,7 @@ const rightScroller = document.querySelector('[data-scroll="right"]');
 const navItems = document.querySelectorAll('.nav-items');
 
 
-//function
+//functions
 function toggleNav() {
   const visible = navLinks.getAttribute('data-visible');
 
