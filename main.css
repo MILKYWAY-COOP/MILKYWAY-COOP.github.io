@@ -121,7 +121,7 @@ nav {
   }
 
   .nav-links {
-   height: calc(100vh - 55%);
+    height: calc(100vh - 55%);
     position: fixed;
     text-align: center;
     z-index: 1000;
