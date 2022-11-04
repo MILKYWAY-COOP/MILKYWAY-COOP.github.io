@@ -13,6 +13,9 @@ const email = document.querySelector('.email');
 const navItems = document.querySelectorAll('.nav-items');
 const copyright = document.querySelector('.copyright');
 
+// let resObject = {};
+// const express = require('express');
+
 //functions
 function toggleNav() {
   const visible = navLinks.getAttribute('data-visible');
@@ -32,6 +35,7 @@ function closeNav() {
 }
 
 function toggleDropDown() {
+  console.log('clicked');
   let visible = this.getAttribute('data-visible');
   let dropDown = this.parentElement.querySelector('.down');
 
@@ -95,18 +99,20 @@ function validateEmail() {
 function submitForm() {
   if (validateInput() && validateEmail()) {
     inputs.forEach((input) => {
+      resObject = { ...resObject, [input.name]: input.value };
       input.style.border = '2px solid #ffffff';
       input.value = '';
     });
   }
+  console.log(resObject);
 }
 
 function setYear() {
   const date = new Date();
-    const year = date.getFullYear();
-    // get the children of the element with the class of .copyright
-    const children = copyright.children;
-    children[1].innerHTML = year;
+  const year = date.getFullYear();
+  // get the children of the element with the class of .copyright
+  const children = copyright.children;
+  children[1].innerHTML = year;
 }
 
 setYear();
