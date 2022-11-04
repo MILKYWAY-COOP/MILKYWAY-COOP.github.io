@@ -30,9 +30,7 @@
           aria-controls="nav-links"
           aria-expanded="false"
           type="menu"
-        >
-          <span class="sr-only"></span>
-        </button>
+        ></button>
 
         <ul class="nav-links" data-visible="false">
           <li class="nav-items"><a href="#Projects">PRODUCTS</a></li>
@@ -131,6 +129,22 @@
                 </button>
               </a>
             </div>
+            <div class="project-col">
+              <h3>Koimbi Children's Home</h3>
+              <p>Their Main Page</p>
+              <img
+                src="images/Koimbi.png"
+                alt=""
+                class="project-img"
+                id="koimbi"
+              />
+              <a href="https://koimbi.web.app/" target="_blank">
+                <button class="project-button">
+                  <span>Visit</span>
+                  <span class="material-symbols-outlined visit">near_me</span>
+                </button>
+              </a>
+            </div>
           </div>
 
           <div class="navigate">
@@ -184,15 +198,29 @@
         <div class="contact-form">
           <div class="form-col">
             <label for="name">Name</label>
-            <input type="text" class="input" data-hasFocus="false" />
+            <input
+              type="text"
+              class="input"
+              data-hasFocus="false"
+              name="Name"
+            />
           </div>
           <div class="form-col">
             <label for="email">Email</label>
-            <input type="email" class="input email" data-hasFocus="false" />
+            <input
+              type="email"
+              class="input email"
+              data-hasFocus="false"
+              name="Email"
+            />
           </div>
           <div class="form-col">
             <label for="message">Message</label>
-            <textarea class="input" data-hasFocus="false"></textarea>
+            <textarea
+              class="input"
+              data-hasFocus="false"
+              name="Message"
+            ></textarea>
           </div>
           <div class="form-col">
             <button type="submit" class="submit">Reach out</button>
@@ -221,7 +249,7 @@
                 d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"
               />
             </svg>
-            <span></span>
+            <span>2022</span>
           </h6>
         </div>
 
@@ -242,7 +270,7 @@
       </div>
 
       <div class="social-icons">
-        <a href='https://github.com/MILKYWAY-COOP' target='_blank'>
+        <a href="https://github.com/MILKYWAY-COOP" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -256,7 +284,10 @@
             />
           </svg>
         </a>
-        <a href='https://www.linkedin.com/in/stephen-muchendu-a0762a1a1/' target='_blank'>
+        <a
+          href="https://www.linkedin.com/in/stephen-muchendu-a0762a1a1/"
+          target="_blank"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -270,7 +301,7 @@
             />
           </svg>
         </a>
-        <a href='https://www.instagram.com/milkyway_coop/' target='_blank'>
+        <a href="https://www.instagram.com/milkyway_coop/" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -287,6 +318,46 @@
       </div>
     </section>
 
-    <script src="main.js" defer></script>
+    <script type='module' src="main.js" defer></script>
+    <script>
+      // const inputs = document.querySelectorAll('.input');
+      // const express = require('express');
+      // const http = require('http');
+      // const path = require('path');
+      // const nodeMailer = require('nodemailer');
+
+      // function validateInput() {
+      //   let valid = true;
+      //   inputs.forEach((input) => {
+      //     if (input.value === '') {
+      //       input.style.border = '2px solid #ff0505';
+      //       valid = false;
+      //     }
+      //   });
+      //   return valid;
+      // }
+
+      // function validateEmail() {
+      //   const emailRegex =
+      //     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      //   if (emailRegex.test(email.value)) {
+      //     return true;
+      //   } else {
+      //     email.style.border = '2px solid #ff0505';
+      //     return false;
+      //   }
+      // }
+
+      // function submitForm() {
+      //   if (validateInput() && validateEmail()) {
+      //     inputs.forEach((input) => {
+      //       resObject = { ...resObject, [input.name]: input.value };
+      //       input.style.border = '2px solid #ffffff';
+      //       input.value = '';
+      //     });
+      //   }
+      //   console.log(resObject);
+      // }
+    </script>
   </body>
 </html>
